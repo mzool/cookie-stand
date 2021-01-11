@@ -209,7 +209,7 @@ headElement.appendChild(headElementIndex);
 heading.appendChild(headElement);
 
 
-paris.randomCustomorsPerHour( dubai.min,  dubai.max);
+paris.randomCustomorsPerHour( paris.min,  dubai.max);
 console.log(paris.customorPerHourReturn);
 paris.averageSalesPerHour();
 console.log(paris.AvgMultiblyArray);
@@ -270,7 +270,7 @@ headElement.appendChild(headElementIndex);
 heading.appendChild(headElement);
 
 
-lima.randomCustomorsPerHour( dubai.min,  dubai.max);
+lima.randomCustomorsPerHour( lima.min,  dubai.max);
 console.log(lima.customorPerHourReturn);
 lima.averageSalesPerHour();
 console.log(lima.AvgMultiblyArray);
