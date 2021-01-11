@@ -210,7 +210,7 @@ heading.appendChild(headElement);
 
 
 paris.randomCustomorsPerHour( dubai.min,  dubai.max);
-console.log(dubai.customorPerHourReturn);
+console.log(paris.customorPerHourReturn);
 paris.averageSalesPerHour();
 console.log(paris.AvgMultiblyArray);
 var j = 6;
@@ -271,7 +271,7 @@ heading.appendChild(headElement);
 
 
 lima.randomCustomorsPerHour( dubai.min,  dubai.max);
-console.log(dubai.customorPerHourReturn);
+console.log(lima.customorPerHourReturn);
 lima.averageSalesPerHour();
 console.log(lima.AvgMultiblyArray);
 var j = 6;
@@ -300,10 +300,24 @@ total.appendChild(totlLi);
 
 
 
+/*function Location(minimum, maximum, average) {
+    this.min = minimum;
+    this.max = maximum;
+    this.avg = average;
+    this.AvgMultiblyArray= [];
+    this.customorPerHourReturn= [];
+
+    this.randomCustomorsPerHour= function () {
+        for (var i = 0; i < 15; i++) {
+            this.customorPerHourReturn[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+            return;
+        }
 
 
+};
+};
 
 
+ var tokyo = new Location(10,20,11);
 
-
-
+console.log(Location.customorPerHourReturn);*/
