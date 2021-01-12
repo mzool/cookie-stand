@@ -308,11 +308,25 @@ function Location(minimum, maximum, average) {
     this.avg = average;
     this.AvgMultiblyArray = [];
     this.customorPerHourReturn = [];
+   this.counter=0;
    
 }
-var openingHours = ['information'+6 + 'am', 7 + 'am', 8 + 'am', 9 + 'am', 10 + 'am', 11 + 'am', 12 + 'pm', 1 + 'pm', 2 + 'pm', 3 + 'pm', 4 + 'pm', 5 + 'pm', 6 + 'pm', 7 + 'pm', 'Total']
+var openingHours = [6 + 'am', 7 + 'am', 8 + 'am', 9 + 'am', 10 + 'am', 11 + 'am', 12 + 'pm', 1 + 'pm', 2 + 'pm', 3 + 'pm', 4 + 'pm', 5 + 'pm', 6 + 'pm', 7 + 'pm', 'Total']
 
 var namesRow = ['Seattle', 'Tokyo', 'Dubai', 'paris', 'Lima', 'Total'];
+
+Location.prototype.randomCustomer= function(){
+    for (var i = 0; i < 15; i++) {
+        this.customorPerHourReturn[i] = Math.floor(Math.random() * (this.max - this.min) + this.min);
+    }
+}
+Location.prototype.averageSalesPerHour = function () {
+    var counter=0;
+    for (var i = 0; i < this.customorPerHourReturn.length; i++) {
+        this.AvgMultiblyArray[i] = Math.ceil(this.avg * this.customorPerHourReturn[i])
+    this.counter+=this.AvgMultiblyArray[i];}
+};
+
 
 
 var seattle = new Location(23, 65, 6.3);
@@ -320,25 +334,154 @@ var tokyo = new Location(3, 24, 1.2);
 var dubai = new Location(11, 38, 3.7);
 var paris = new Location(20, 38, 2.3);
 var lima = new Location(2, 16, 4.6);
+seattle.randomCustomer();
+seattle.averageSalesPerHour();
+console.log(seattle.AvgMultiblyArray);
+tokyo.randomCustomer();
+tokyo.averageSalesPerHour();
+console.log(tokyo.AvgMultiblyArray);
+dubai.randomCustomer();
+dubai.averageSalesPerHour();
+console.log(dubai.AvgMultiblyArray);
+paris.randomCustomer();
+paris.averageSalesPerHour();
+console.log(paris.AvgMultiblyArray);
+lima.randomCustomer();
+lima.averageSalesPerHour();
+console.log(lima.AvgMultiblyArray);
 
-Location.prototype.averageSalesPerHour = function () {
-    var counter=0;
-    for (var i = 0; i < this.customorPerHourReturn.length; i++) {
-        this.AvgMultiblyArray[i] = Math.ceil(this.avg * this.customorPerHourReturn[i])
-    counter+=this.AvgMultiblyArray[i];}
-};
 
     var div = document.getElementById('maindiv');
     var mainTable = document.createElement('table');
     div.appendChild(mainTable);
     var rowOne = document.createElement('tr');
     mainTable.appendChild(rowOne);
+    var rmptyCell = document.createElement('td');
+    rowOne.appendChild(rmptyCell);
     for (var i = 0; i < openingHours.length; i++) {
+        var firstRowColoumns= document.createElement('td');
+        rowOne.appendChild(firstRowColoumns);
         var mainHead = document.createElement('th');
-        rowOne.appendChild(mainHead);
+        firstRowColoumns.appendChild(mainHead);
         var openingHoure = document.createTextNode(openingHours[i])
         mainHead.appendChild(openingHoure);
     }
+
+
+var rowTwo =  document.createElement('tr');
+mainTable.appendChild(rowTwo);
+var firstColoumn= document.createElement('td');
+var coloumContent1= document.createTextNode('Seattle');
+rowTwo.appendChild(firstColoumn);
+firstColoumn.appendChild(coloumContent1);
+for(var i =0; i<(seattle.AvgMultiblyArray.length-1);i++){
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(seattle.AvgMultiblyArray[i]);
+    rowTwo.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+var totalRowOne = document.createElement('td');
+rowTwo.appendChild(totalRowOne);
+var counterSeattle= document.createTextNode(seattle.counter);
+totalRowOne.appendChild(counterSeattle);
+
+
+var rowThree =  document.createElement('tr');
+mainTable.appendChild(rowThree);
+var secondColoumn= document.createElement('td');
+var coloumContent2= document.createTextNode('Tokyo');
+rowThree.appendChild(secondColoumn);
+secondColoumn.appendChild(coloumContent2);
+for(var i =0; i<(tokyo.AvgMultiblyArray.length-1);i++){
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(tokyo.AvgMultiblyArray[i]);
+    rowThree.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+var totalRowTwo = document.createElement('td');
+rowThree.appendChild(totalRowTwo);
+var counterTokyo= document.createTextNode(tokyo.counter);
+totalRowTwo.appendChild(counterTokyo);
+
+
+var rowFour =  document.createElement('tr');
+mainTable.appendChild(rowFour);
+var thirdColoumn= document.createElement('td');
+var coloumContent3= document.createTextNode('Dubai');
+rowFour.appendChild(thirdColoumn);
+thirdColoumn.appendChild(coloumContent3);
+for(var i =0; i<(dubai.AvgMultiblyArray.length-1);i++){
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(dubai.AvgMultiblyArray[i]);
+    rowFour.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+var totalRowThree = document.createElement('td');
+rowFour.appendChild(totalRowThree);
+var counterDubai= document.createTextNode(dubai.counter);
+totalRowThree.appendChild(counterDubai);
+
+
+var rowFive =  document.createElement('tr');
+mainTable.appendChild(rowFive);
+var fourthColoumn= document.createElement('td');
+var coloumContent4= document.createTextNode('Paris');
+rowFive.appendChild(fourthColoumn);
+fourthColoumn.appendChild(coloumContent4);
+for(var i =0; i<(paris.AvgMultiblyArray.length-1);i++){
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(paris.AvgMultiblyArray[i]);
+    rowFive.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+var totalRowFour = document.createElement('td');
+rowFive.appendChild(totalRowFour);
+var counterParis= document.createTextNode(paris.counter);
+totalRowFour.appendChild(counterParis);
+
+
+var row6 =  document.createElement('tr');
+mainTable.appendChild(row6);
+var sixthColoumn= document.createElement('td');
+var coloumContent5= document.createTextNode('Lima');
+row6.appendChild(sixthColoumn);
+sixthColoumn.appendChild(coloumContent5);
+for(var i =0; i<(lima.AvgMultiblyArray.length-1);i++){
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(lima.AvgMultiblyArray[i]);
+    row6.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+var totalRowFive = document.createElement('td');
+row6.appendChild(totalRowFive);
+var counterLima= document.createTextNode(lima.counter);
+totalRowFive.appendChild(counterLima);
+
+var totalOfTotal = document.createElement('tr');
+var totalOfTotalCell1= document.createElement('td');
+mainTable.appendChild(totalOfTotal);
+totalOfTotal.appendChild(totalOfTotalCell1);
+var totalOfTotalValue = document.createTextNode('Totals');
+totalOfTotalCell1.appendChild(totalOfTotalValue);
+for(var i =0; i<=13;i++){
+
+    var coloumns = document.createElement('td');
+    var coloumnContents = document.createTextNode(lima.AvgMultiblyArray[i]+dubai.AvgMultiblyArray[i]+tokyo.AvgMultiblyArray[i]+seattle.AvgMultiblyArray[i]+paris.AvgMultiblyArray[i]);
+    totalOfTotal.appendChild(coloumns);
+    coloumns.appendChild(coloumnContents);
+}
+
+var totalFinal = document.createElement('td');
+totalOfTotal.appendChild(totalFinal);
+var totalFinalIndex = document.createTextNode(seattle.counter+tokyo.counter+lima.counter+dubai.counter+paris.counter)
+totalFinal.appendChild(totalFinalIndex);
+
+
+
+
+
+
+
 
 /*var mainTable2 = document.createElement('table');
 var rowTwo = document.createElement('tr');
