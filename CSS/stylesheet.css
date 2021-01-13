@@ -9,12 +9,11 @@ header{
     opacity: .6;
 }
 main{
-    min-height: 30cm;
+    min-height: 70m;
 }
 #firstdiv img {
     display: inline;
     position: relative;
-    display: inline;
     width: 10cm;
     float: left;
     height: 2cm;
@@ -91,12 +90,31 @@ top: .86cm;
     text-align: center;
     color: rgb(240, 53, 53);
 }
+
+#opininghours{
+position: relative;
+display: inline;
+font-size: .8cm;
+float: left;
+font-style: oblique;
+color: linen;
+top: .1cm;
+left: 1cm;
+}
+.imagesdiv{
+   display: inline;
+   position: relative;
+  
+}
+
+
 footer{
     min-height: 4cm;
       background-color: cadetblue;
       opacity: .6;
       position: relative;
-      margin-top: .2cm;
+      margin: .2cm;
+      top: 4cm;
       
   }
 
@@ -119,27 +137,9 @@ footer{
     font-size: large;
     font-style: italic;
 }
-#opininghours{
-position: relative;
-display: inline;
-font-size: .8cm;
-float: left;
-font-style: oblique;
-color: linen;
-top: .1cm;
-left: 1cm;
-}
-.imagesdiv{
-   display: inline;
-   position: relative;
-  
-}
-img:nth-child(1){
-    width: 10cm;
-    height: 7cm;
-    display: inline;
-    position: relative;
-    margin: 5px;
- left: 1cm;
 
+main * img{
+   
+    width: 7cm;
+    height: 3cm;
 }
