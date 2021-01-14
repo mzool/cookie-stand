@@ -1,0 +1,109 @@
+body{
+    background: url('../images/cookies.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+header{
+    background-color: lightseagreen;
+    min-height: 3cm;
+    opacity: .6;
+}
+main{
+   min-height: 15cm;
+    margin: 0cm;
+}
+#firstdiv{
+float: left;
+}
+#firstdiv img {
+    display: inline;
+    position: relative;
+    width: 10cm;
+    float: left;
+    height: 2cm;
+    left: 2cm;
+    top: 10px;
+  
+}
+#firstdiv{
+    display: inline;
+}
+#firstdiv ul{
+display: inline;
+position: relative ;
+left: 7cm;
+top: 1cm;
+float: right;  
+}
+#firstdiv li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1cm;
+}
+#firstdiv a{
+    text-decoration: none;
+    margin-left: 3cm;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#maindiv{
+    display: block;
+    float: left;
+    position: relative;
+    top: 1cm;
+    left: 6cm;
+}
+#null{
+    border: 0cm;
+}
+table{
+    /* border: solid rgb(194, 83, 83); */
+    font-size: larger;
+    color: white;
+    height: 10cm;
+    align-content: center;
+    font-size: 30px;
+    margin: 10px;
+}
+#rowempty{
+    border: 0cm;
+}
+   
+td{
+    border: solid rgb(194, 83, 83);
+    margin: 5px;
+}
+ tr{border: solid rgb(194, 83, 83); */
+    margin: 5px;
+}}
+
+
+footer{
+    position: relative;
+    top: 20cm;
+}
+/* #footerdiv  ul{
+    float: left;
+    display: inline;
+    
+}
+footer li{
+    color: rgb(139, 6, 6);
+    display: inline;
+    position: relative;
+    left: 1cm;
+    margin: 1cm;
+   top: 0cm;
+    font-family: fantasy;
+    font-size: large;
+    font-style: italic;
+    background-color: lightseagreen;
+} */
+form{
+    position: relative;
+    top: 15cm;
+    left:1cm;
+}

@@ -9,12 +9,15 @@ header{
     opacity: .6;
 }
 main{
-    min-height: 30cm;
+    min-height: 40cm;
+    margin: 0cm;
+}
+#firstdiv{
+float: left;
 }
 #firstdiv img {
     display: inline;
     position: relative;
-    display: inline;
     width: 10cm;
     float: left;
     height: 2cm;
@@ -28,7 +31,7 @@ main{
 #firstdiv ul{
 display: inline;
 position: relative ;
-right: 3cm;
+left: 7cm;
 top: 1cm;
 float: right;  
 }
@@ -45,7 +48,7 @@ float: right;
 }
 
 #seconddiv{
-   
+   float: left;
     max-height: 30cm;
 }
 #seconddiv img {
@@ -90,35 +93,9 @@ top: .86cm;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
     text-align: center;
     color: rgb(240, 53, 53);
-}
-footer{
-    min-height: 4cm;
-      background-color: cadetblue;
-      opacity: .6;
-      position: relative;
-      margin-top: .2cm;
-      
-  }
-
-#footerdiv{
-    display: inline;
-}
-#footerdiv  ul{
-    display: inline;
+    height: 2cm;
 }
 
-
-#footerdiv :last-child li{
-    color: rgb(139, 6, 6);
-    display: inline;
-    position: relative;
-    left: 1cm;
-    margin: 1cm;
-    top: 1.5cm;
-    font-family: fantasy;
-    font-size: large;
-    font-style: italic;
-}
 #opininghours{
 position: relative;
 display: inline;
@@ -134,12 +111,87 @@ left: 1cm;
    position: relative;
   
 }
-img:nth-child(1){
-    width: 10cm;
-    height: 7cm;
+
+
+#formdiv{
+float: left;
+
+}
+#form{
+    float: left;
+    border: inset rgb(20, 20, 20);
+    position: relative;
+    font-size: 30px;
+    width: 14cm;
+    height:4cm;
+    top: 1cm;
+   display: inline;
+   background-color: royalblue;
+   text-align: center;
+   margin: .5cm;
+   border-radius: 1cm;
+}
+fieldset{
+    display: inline;
+    height: fit-content;
+    width: (fit-content+1cm);
+    border:initial rgb(14, 1, 1);
+
+}
+input {
     display: inline;
     position: relative;
-    margin: 5px;
- left: 1cm;
+    display: inline-flexbox;
+    border: solid black;
+    margin-top: .5cm; 
+    color: rgb(14, 13, 12);
+    border-radius: 1cm ;
+}
+#sub{
+    position: relative;
+ margin-top: .5cm; 
+width: 2cm;
+height: 1cmcm;
+font-size: 30px;
+}
+footer{
+    min-height: 4cm;
+      background-color: cadetblue;
+      opacity: .6;
+      position: sticky ;
+      margin: .2cm;
+ bottom: 0cm;
+      
+  }
 
+#footerdiv{
+    display: inline;
+ 
+}
+#footerdiv  ul{
+    float: left;
+    display: inline;
+    
+}
+
+
+#footerdiv:last-child li{
+    color: rgb(139, 6, 6);
+    display: inline;
+    position: relative;
+    left: 1cm;
+    margin: 1cm;
+    top: 1.5cm;
+    font-family: fantasy;
+    font-size: large;
+    font-style: italic;
+}
+/* #imagesdiv{
+float: right;
+display: inline;
+} */
+#imagesdiv img:nth-child(1) {
+  width: 10cm;
+  float: right;
+  
 }
