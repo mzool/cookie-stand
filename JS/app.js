@@ -166,6 +166,6 @@ var lastCell = document.createElement('td');
 row2.appendChild(lastCell);
 var lastIndex = document.createTextNode(counterOfAllRow);
 lastCell.appendChild(lastIndex);
-
+newLocation.removeEventListener('submit', newOne);
 }
 
