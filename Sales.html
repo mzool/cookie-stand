@@ -15,37 +15,37 @@
                 src="https://codefellows.github.io/code-201-guide/curriculum/class-06/lab/assets/salmon.png" alt="">
 
             <ul>
-                <li><a href="index.html">home</a></li>
                 <li><a href="">locations</a> </li>
+                <li><a href="index.html">home</a></li>
             </ul>
     </header>
     <main>
-        <div id="maindiv">
-            <script src="JS/app.js"></script>
-        </div>
         <div id="formdiv">
-
     <form id="form2" action="">
-        <fieldset>Tell us where to open another branch</fieldset>
+        <fieldset>
+        <legend>Write a location and expected values per hour  </legend>
         <br>
         <label for="location">Location:</label>
         <input id="location" name="location" type="text" form="form2">
         <br>
         <label for="mincust">Minumum Customor:</label>
-        <input id="mincust" name="mincust" type="text" form="form2">
+        <input id="mincust" name="mincust" type="number" form="form2">
         <br>
         <label for="maxcust">Maximum Customor:</label>
-        <input id="maxcust" name="maxcust" type="text" form="form2">
+        <input id="maxcust" name="maxcust" type="number" form="form2">
         <br>
         <label for="avgcust">Average Sales:</label>
-        <input id="avgcust" name="avgcus" type="text" form="form2">
+        <input id="avgcust" name="avgcust" type="number" form="form2">
         <br>
-        <input type="submit" name="sub" form="form2" value="ok" id="sub">
+        <input type="submit" name="sub" form="form2" value="ok" id="sub"> 
+    </fieldset>
     </form>
 
         </div>
+        <div id="maindiv"> 
+        </div>
     </main>
-
+<script src="JS/app.js"></script>
     <footer>
 
         <div id="footerdiv">
