@@ -114,7 +114,8 @@ creatingRows(1, 'Paris');
 rowsMaker(paris);
 creatingRows(1, 'Lima');
 rowsMaker(lima);
-// console.log(counterOfAllRow);
+console.log(counterOfAllRow);
+function total(){
 var Total = 0;
 var row2 = document.createElement('tr');
 table.appendChild(row2);
@@ -132,7 +133,8 @@ var lastCell = document.createElement('td');
 row2.appendChild(lastCell);
 var lastIndex = document.createTextNode(counterOfAllRow);
 lastCell.appendChild(lastIndex);
-
+}
+total();
 /////// Add location by user ///////////
 //window.onload =function(){              //} or put scr tags after the element you want to use by DOM
 var newLocation = document.getElementById('form2');
@@ -146,26 +148,12 @@ function newOne(event) {
     var newPlace = new Location(minimum1, maximum1, average1);
     newPlace.randomCustomer();
     newPlace.averageSalesPerHour();
-    console.log(newPlace.AvgMultiblyArray);
     creatingRows(1, place);
     rowsMaker(newPlace);
-    var Total = 0;
-var row2 = document.createElement('tr');
-table.appendChild(row2);
-var totalCell = document.createElement('th');
-var totalCellIndex = document.createTextNode('Total');
-row2.appendChild(totalCellIndex);
-for (var i = 0; i < seattle.AvgMultiblyArray.length; i++) {
-    var cell = document.createElement('td');
-    row2.appendChild(cell);
-    var cellIndex = document.createTextNode(totalOfTotal[i]);
-    cell.appendChild(cellIndex);
-    Total += totalOfTotal[i];
+    deleteRow();
+    total();
+    newLocation.removeEventListener('submit', newOne);
 }
-var lastCell = document.createElement('td');
-row2.appendChild(lastCell);
-var lastIndex = document.createTextNode(counterOfAllRow);
-lastCell.appendChild(lastIndex);
-newLocation.removeEventListener('submit', newOne);
+function deleteRow(){
+    table.deleteRow(6);
 }
-
